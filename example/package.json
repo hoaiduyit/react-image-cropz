@@ -8,7 +8,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-image-cropz": "file:..",
+    "react-image-cropz": "^0.1.0",
     "react-scripts": "^1.1.4"
   },
   "scripts": {
