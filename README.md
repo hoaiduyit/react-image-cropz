@@ -13,14 +13,30 @@ npm install --save react-image-cropz
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import MyComponent from 'react-image-cropz'
+import ReactImageCropZ from 'react-image-cropz'
 
-class Example extends Component {
+class YourComponent extends React.Component {
+  state = {
+    crop: {
+      x: 10,
+      y: 10,
+      width: 80,
+      height: 80
+    }
+  }
+  onCropChange(crop) {
+    this.setState({ crop });
+  }
+
   render () {
     return (
-      <MyComponent />
+      <ReactImageCropZ
+        src="your-image-url"
+        crop={this.state.crop}
+        onChange={this.onCropChange}
+      />
     )
   }
 }
